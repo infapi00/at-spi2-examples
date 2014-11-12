@@ -6,6 +6,11 @@ gnome-shell accessibility implementation:
   my recommendation is still use accerciser, as has a lot of more
   options.
 
+* In any case, I think that it would be good to have something like
+  these examples published somewhere, because right now, libatspi
+  doesn't have any real examples around, except perhaps Orca, but it
+  uses pyatspi2 and is too big as a first example (imho).
+
 * They were written in C because at some periods (mostly due the
   python3 migration), it was complex to get those programs done in
   python. Was easier to write them in C that fix the python
