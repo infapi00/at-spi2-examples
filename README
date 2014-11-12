@@ -1,0 +1,22 @@
+This is a bunch of atspi examples that I used while working on
+gnome-shell accessibility implementation:
+
+* I needed to create terminal programs because it was complex to use
+  accerciser while working on gnome-shell. For any other application,
+  my recommendation is still use accerciser, as has a lot of more
+  options.
+
+* They were written in C because at some periods (mostly due the
+  python3 migration), it was complex to get those programs done in
+  python. Was easier to write them in C that fix the python
+  dependencies issues.
+
+* There are also some scripts written in javascript, initially created
+  to test the gobject-introspected bindings, after finding that those
+  had some bugs not found on pyatspi2. It would be good to get the
+  same functionality of the C programs.
+
+Eventually, those examples could be part of atspi itself. But probably
+it also makes sense to keep them as a different repository, so we can
+have examples written in different languages (only C written examples
+fit on atspi)
