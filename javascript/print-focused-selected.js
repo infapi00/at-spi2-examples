@@ -55,7 +55,7 @@ function getLabel(accessible) {
 
     /* something like "let relation in relationSet" doesn't work, and
      * it seems that GArray "len" is not exposed */
-    while (relationSet[0]) {
+    while (relationSet[i]) {
         let relation = relationSet[i];
 
         if (relation.get_relation_type() == Atspi.RelationType.LABELLED_BY)
