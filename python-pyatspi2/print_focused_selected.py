@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #
-# print_focused.py
+# print_focused_selected.py
 #
 # Copyright (C) 2015 Magdalen Berns <m.berns@thismagpie.com>
 #
@@ -33,10 +33,14 @@ def on_key_input(event):
                   method to print focused and selected events
 """
 def print_changed(event):
-  print("focused object: %s" % (event.source_name))
-
+  if event.type in ('object:state-changed:selected'):
+    print("Selected object %s\n %s\n" % (event.source_name, event.source_role))
+  if event.type in ('object:state-changed:focused'):
+    print("Focused object %s\n %s\n" % (event.source_name, event.source_role))
+ 
 pyatspi.Registry.registerEventListener(print_changed,
-                                       "object:state-changed:focused")
+                                       'object:state-changed:selected',
+                                       'object:state-changed:focused')
 pyatspi.Registry.registerKeystrokeListener(on_key_input,
                                            kind=(pyatspi.KEY_PRESSED_EVENT,
                                                  pyatspi.KEY_RELEASED_EVENT))
