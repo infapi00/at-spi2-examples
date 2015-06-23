@@ -33,10 +33,7 @@ def on_key_input(event):
                   method to print focused and selected events
 """
 def print_changed(event):
-  if event.type in ('object:state-changed:selected'):
-    print("Selected object %s\n %s\n" % (event.source_name, event.source_role))
-  if event.type in ('object:state-changed:focused'):
-    print("Focused object %s\n %s\n" % (event.source_name, event.source_role))
+  print("[{0}] ==> {1}").format(event.host_application.name, event.type)
  
 pyatspi.Registry.registerEventListener(print_changed,
                                        'object:state-changed:selected',
