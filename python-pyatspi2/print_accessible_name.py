@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #
-# print_focused_selected.py
+# print_accessible_name.py
 #
 # Copyright (C) 2015 Magdalen Berns <m.berns@thismagpie.com>
 #
@@ -23,21 +23,20 @@ import pyatspi
 
 """ on_key_input:
                  listener method to allow script to exited
-                 whenever the F4 key is pressed.
+                 whenever the q key is pressed.
 """
 def on_key_input(event):
-  if event.event_string=='F4':
+  if event.event_string=='q':
     pyatspi.Registry.stop()
  
 """ print_changed:
-                  method to print focused and selected events
+                  method to print property-change:accessile-name events
 """
 def print_changed(event):
-  print("[{0}] ==> {1}").format(event.host_application.name, event.type)
+    print("[{0}] ==> {1}").format(event.source_name, event.type)
  
 pyatspi.Registry.registerEventListener(print_changed,
-                                       'object:state-changed:selected',
-                                       'object:state-changed:focused')
+                                       'object:property-change:accessible-name')
 pyatspi.Registry.registerKeystrokeListener(on_key_input,
                                            kind=(pyatspi.KEY_PRESSED_EVENT,
                                                  pyatspi.KEY_RELEASED_EVENT))

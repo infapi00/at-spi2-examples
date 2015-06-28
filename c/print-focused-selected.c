@@ -1,7 +1,6 @@
 /*
- * For each focus/selection change, it prints the following for each
- * object getting the focus/selection:
- *    (appname, name, rolename, [state-set])
+ * For each focus/selection change, it prints the (name, role, [state-set])
+ * for the object getting the focus/selection.
  *
  * You can specify if you want to filter by application. Use --help
  * for more information.

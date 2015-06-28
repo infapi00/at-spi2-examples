@@ -35,7 +35,7 @@ def on_exit_key(e):
                 function to print registered window events
 """
 def print_event(e):
-    print("Signal: " + e.type)
+  print("[{0}] ==> {1}").format(e.host_application.name, e.type)
 
 pyatspi.Registry.registerEventListener(print_event, "window:activate")
 pyatspi.Registry.registerEventListener(print_event, "window:create")
