@@ -20,9 +20,13 @@ And if you want to clean up all the binaries
 
 ## To Run Examples
 
-Type the following into the terminal:
+If everything went well, the make command would create some
+binaries. So to execute any of them, just execute this on the
+terminal:
 
-` ./example.py`
+` ./$EXAMPLE_BINARY`
+
+Where $EXAMPLE_BINARY is the name of the specific binary built
 
 ## Documentation
 
