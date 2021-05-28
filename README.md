@@ -85,7 +85,7 @@ the following:
 ## at-spi examples, why a different repository?
 
 Current libatspi documentation only includes the [API
-reference](https://developer.gnome.org/libatspi/2.15/), and at-spi2
+reference](https://developer.gnome.org/libatspi), and at-spi2
 repositories doesn't include examples right now. In the same way, the
 only complete AT using atspi, Orca, is too big to handle for a
 newcomer. Having some example using that library is a good complement
