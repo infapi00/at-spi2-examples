@@ -48,7 +48,7 @@ function dumpNodeContent(node, padding) {
     nodeInfo = printInfo(node);
     print(padding + nodeInfo);
 
-    for (let i = 0; i < node.get_child_count(node); i++)
+    for (let i = 0; i < node.get_child_count(); i++)
         dumpNodeContent(node.get_child_at_index(i), newPadding);
 }
 
