@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ESNext"
+    ],
+    "types": [
+      "@girs/gjs",
+      "@girs/adw-1",
+      "node"
+    ],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+  },
+  "files": [
+    "dump-tree.ts",
+  ],
+  "include": [
+    "@girs/atspi-2.0",
+    "@girs/gjs",
+  ],
+}
