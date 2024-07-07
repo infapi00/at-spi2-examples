@@ -1,0 +1,26 @@
+{
+  "name": "at-spi2-examples",
+  "version": "1.0.0",
+  "description": "AT-SPI examples for Node.js",
+  "main": "list-applications.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infapi00/at-spi2-examples.git"
+  },
+  "keywords": [
+    "AT-SPI"
+  ],
+  "author": "Alex Jurgensen",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/infapi00/at-spi2-examples/issues"
+  },
+  "homepage": "https://github.com/infapi00/at-spi2-examples#readme",
+  "dependencies": {
+    "node-gtk": "^0.14.0"
+  }
+}
